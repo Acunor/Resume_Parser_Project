@@ -1,0 +1,52 @@
+{% extends 'home.html' %} 
+
+{% block title %}
+    Register Page
+{% endblock %}
+
+{% block content %}
+<div class="container"> 
+    <center><h1> Registeration Form</h1><hr></center>
+        </center>
+            <form action="/registers", method="post" enctype="multipart/form-data">
+                <center>
+                    <table>
+                        <tr>
+                            <td>{{ form.hidden_tag() }}</td>
+                            <td>{{form.user_name.label}}</td>
+                            
+                            <td><center>{{form.user_name(size=32)}}</center></td>
+                        </tr>
+                        <tr><td></td></tr>
+                        <tr>
+                            <td></td>
+                            <td>{{form.password.label}}</td>
+                            <td><center>{{form.password(size=32)}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>{{form.confirm.label}}</td>
+                            <td><center>{{form.confirm(size=32)}}</td>
+                        </tr>     
+                        <tr><td></td></tr>                   
+                        <tr>
+                            <td></td>
+                            <td><center><input type="file" name="file" /></center></td>
+                        </tr>                        
+                        <!-- <tr>    
+                            <td></td>                        
+                            <td>
+                                <center><input type = "submit" value="Upload"></center>
+                            </td>
+                        </tr>                         -->
+                        <tr>
+                            <td></td>                        
+                            <td></td>
+                            <td><center><p>{{ form.submit() }}</p></center></td>
+                        </tr>     
+
+                    </table>
+                </center>       
+        </center>
+</div>
+{% endblock %}

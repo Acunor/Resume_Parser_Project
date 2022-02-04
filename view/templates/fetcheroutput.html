@@ -1,0 +1,18 @@
+{% extends 'home.html' %} 
+
+{% block title %}
+    Acunor Page
+{% endblock %}
+
+{% block content %}
+    <html>
+    <title>
+        Fetcheroutput Page
+    </title>
+    <body>
+        <center>
+            {{ data | safe }}        
+        </center>
+    </body>
+</html>
+{% endblock %}

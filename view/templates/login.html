@@ -1,0 +1,74 @@
+{% extends 'home.html' %} 
+
+{% block title %}
+    Register Page
+{% endblock %}
+
+{% block content %}
+<head>
+    <style>
+        .container {   
+                        width: 400px;
+                        padding: 25px;   
+                        background-color: rgb(173, 228, 230);  
+                    }
+        Body {  
+              font-family: Calibri, Helvetica, sans-serif;  
+              background-color: pink;  
+            }
+        button {   
+                   background-color: #4CAF50;   
+                   width: 100%;  
+                    color: black;   
+                    padding: 15px;   
+                    margin: 10px 0px;   
+                    border: none;   
+                    cursor: pointer;   
+                }          
+         input[type=text], input[type=password] {   
+                                                    width: 100%; 
+                                                    margin: 8px 0;  
+                                                    padding: 12px 20px;   
+                                                    display: inline-block;   
+                                                    border: 2px solid green;   
+                                                    box-sizing: border-box;   
+                                                }  
+         
+        td{
+                color: black;
+            }
+        h1{
+                color: black;
+            }
+
+    </style>
+</head>
+<body>
+<div class="container"> 
+    <center><h1> Login Form</h1><hr></center>
+        <center>
+            <form action="/logins", method="post">
+                <center>
+                    <table>
+                        <tr>
+                            <td>{{ form.hidden_tag() }}</td>
+                            <td>{{form.user_name.label}}</td>                            
+                            <td><center>{{form.user_name(size=32)}}</center></td>
+                        </tr>
+                        <tr><td></td></tr>
+                        <tr>
+                            <td></td>
+                            <td>{{form.password.label}}</td>
+                            <td><center>{{form.password(size=32)}}</center></td>
+                        </tr>      
+                        <tr><td></td></tr>    <tr><td></td></tr>               
+                        <tr>
+                            <td></td><td></td>
+                            <td><center><p>{{ form.submit() }}</p></center></td>
+                        </tr>                        
+                    </table>
+                </center>       
+        </center>
+</div>
+</body>
+{% endblock %}

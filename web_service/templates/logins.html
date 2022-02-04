@@ -1,0 +1,81 @@
+{% extends 'home.html' %} 
+
+{% block title %}
+    Login Page
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+button {   
+       background-color: #4CAF50;   
+       width: 48%;  
+        color: black;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ /* form {   
+        border: 3px solid #f1f1f1;   
+    }    */
+ input[type=text], input[type=password] {   
+        width: 100%; 
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+
+    b {
+        color: black;
+    }
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        width: 400px;
+        padding: 25px;   
+        background-color: rgb(173, 228, 230);  
+    }   
+
+   
+</style>   
+</head>    
+<body>   
+    <center> <h1> Acunor </h1> </center>    
+    <center> <h1> Employee Sign in </h1> </center>   
+    <form>  
+        <div class="container">   
+            <label><b>Username : </b></label>   
+            <input type="text" placeholder="Enter Username" name="username" required>  
+            <label><b>Password :</b> </label>   
+            <input type="password" placeholder="Enter Password" name="password" required>  
+            <button type="submit"><b>Login</b></button>  
+            <button type="submit"><b>Cancle</b></button> 
+            <hr>
+            <input type="checkbox" checked="checked"> <b>Remember me</b>
+            &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;   &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  
+            <!-- <button type="button" class="cancelbtn"> <b>Cancel</b></button>    -->
+            <b>Forgot</b><a href="#"> <b>Password</b> </a>   
+        </div>           
+    </form>       
+</body>     
+</html>  
+{% endblock %}
