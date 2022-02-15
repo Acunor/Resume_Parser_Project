@@ -1,3 +1,0 @@
-1) Resume Save in a folder
-    file=request.files["file"]        
-    file.save(os.path.join("Resumesupload", file.filename))

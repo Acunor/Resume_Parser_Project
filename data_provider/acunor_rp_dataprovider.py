@@ -23,7 +23,7 @@ class CouchdbProvider(object):
         jdata=json.dumps(employeedetails.__dict__)
         jsondata=json.loads(jdata)   
         self.db.save(jsondata)       
-        print("Data Saved")
+        
      
         
     

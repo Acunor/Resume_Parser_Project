@@ -28,8 +28,8 @@ class FileFetcher(object):
             text=self.fetch_pdf_file(myfile)
             self.parser.parse_and_save_text(myfile, text)
         elif file_extension=='.docx':
-            text=self.fetch_pdf_file(file)
-            text=self.parser.parse_text(text)
+            text=self.fetch_docx_file(myfile)
+            self.parser.parse_and_save_text(myfile, text)
         else:
             print("Invalid Formate")
                 
@@ -78,8 +78,8 @@ class FileFetcher(object):
             text += pageObj.extractText()
         return text
     
-    def fetch_docx_file(self):
-        temp = docx2txt.process('Bhargavi Angular JS Developer.docx')
+    def fetch_docx_file(self,file):        
+        temp = docx2txt.process(file)
         text = [line.replace('\t', ' ') for line in temp.split('\n') if line]
         return ' '.join(text)
     

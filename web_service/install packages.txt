@@ -1,9 +1,0 @@
-pip install flask_WTF
-pip install email-validator
-pip install WTForms==2.3.3
-pip install flask-login
-
-
-Help sites
-https://www.onlinetutorialspoint.com/flask/python-flask-login-form-example.html
-https://flask.palletsprojects.com/en/2.0.x/patterns/wtforms/

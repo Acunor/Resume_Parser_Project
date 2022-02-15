@@ -1,18 +1,27 @@
-{% extends 'home.html' %} 
+{% extends 'dashboard.html' %} 
 
 {% block title %}
     Acunor Page
 {% endblock %}
 
-{% block content %}
-    <html>
+{% block content %}       
+<head>
     <title>
         Fetcheroutput Page
     </title>
-    <body>
-        <center>
-            {{ data | safe }}        
-        </center>
-    </body>
-</html>
+    <style>
+        table {border: 1px solid  #F2AA4CFF;}
+        table {text-align: center;}
+        table thead th {text-align: center;}
+        td {height: 50px;}
+    </style>
+</head>
+<body>
+    <center>         
+            <table>
+                <tr>{{ data | safe }}</tr>
+            </table>      
+    </center>
+</body>
+
 {% endblock %}

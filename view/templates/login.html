@@ -1,16 +1,17 @@
 {% extends 'home.html' %} 
 
 {% block title %}
-    Register Page
+    Login Page
 {% endblock %}
 
 {% block content %}
 <head>
     <style>
         .container {   
-                        width: 400px;
+                        width: 450px;
                         padding: 25px;   
-                        background-color: rgb(173, 228, 230);  
+/*                         background-color: rgb(173, 228, 230);   */
+                        background-color: #F2AA4CFF;
                     }
         Body {  
               font-family: Calibri, Helvetica, sans-serif;  
@@ -40,6 +41,8 @@
         h1{
                 color: black;
             }
+        b{
+            font-weight: bold;
 
     </style>
 </head>
@@ -52,13 +55,13 @@
                     <table>
                         <tr>
                             <td>{{ form.hidden_tag() }}</td>
-                            <td>{{form.user_name.label}}</td>                            
+                            <td><b>{{form.user_name.label}}</b></td>                            
                             <td><center>{{form.user_name(size=32)}}</center></td>
                         </tr>
                         <tr><td></td></tr>
                         <tr>
                             <td></td>
-                            <td>{{form.password.label}}</td>
+                            <td><b>{{form.password.label}}</b></td>
                             <td><center>{{form.password(size=32)}}</center></td>
                         </tr>      
                         <tr><td></td></tr>    <tr><td></td></tr>               

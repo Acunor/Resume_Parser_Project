@@ -1,17 +1,26 @@
-{% extends 'home.html' %} 
+{% extends 'dashboard.html' %} 
 
 {% block title %}
     Loginnext Page
 {% endblock %}
 
-{% block content %}    
-    <center>
+{% block content %} 
+<head>
+    <style>
+        table, tr, td {
+              border: 2px solid  #F2AA4CFF; 
+           }
+    div{
+            text-transform: capitalize;
+        }
+    </style>
+    
+</head>
+<body>
+<!--     <center>
         <table>
-            <tr>
-                <h1>Successfully Loged {{ name }}</h1>
-            </tr>
-<!--             <tr>
-                {{ string }}
-            </tr>             -->
-    </center>       
+            <div><tr><td><div>welcome to dashboard {{ name }}</div></td></tr>
+        </table>
+    </center>    -->
+</body>
 {% endblock %}
